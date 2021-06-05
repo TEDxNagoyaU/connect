@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/watch", (function(a,b){return {data:[{Urls:{youtube:{watch1:"https:\u002F\u002Fwww.youtube.com\u002Fembed\u002FU-AecKG2kaI",watch2:b,watch3:b},zoom:{break1:{booth1:a,booth2:a},break2:{booth1:a,booth2:a}}}}],fetch:{},mutations:void 0}}("","https:")));
