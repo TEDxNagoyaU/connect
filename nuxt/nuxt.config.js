@@ -8,6 +8,7 @@ export default {
    */
   router: {
     base: process.env.DEPLOY_ENV === 'DEVELOP' ? '/connect/'
+        : process.env.DEPLOY_ENV === 'REHEARSAL' ? '/rehearsal/'
         : '/'
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -18,6 +19,7 @@ export default {
     },
     base: {
       href: process.env.DEPLOY_ENV === 'DEVELOP' ? '/connect/'
+          : process.env.DEPLOY_ENV === 'REHEARSAL' ? '/rehearsal/'
           : '/'
     },
     meta: [
