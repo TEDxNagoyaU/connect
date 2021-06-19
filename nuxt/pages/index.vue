@@ -14,13 +14,13 @@
         <div class="col-md-6 fluid_fullwidth text-center">
           <countdown :time="time" :interval="100" v-slot="{ days, hours, minutes, seconds}">
             <template>
-                <h2>開場まで：{{ days }} 日 {{ hours }} 時 {{ minutes }} 分 {{ seconds }} 秒</h2>
+                <h2>開場まで：{{ days }} 日 {{ hours }} 時間 {{ minutes }} 分 {{ seconds }} 秒</h2>
             </template>
           </countdown>
         </div>
         <div class="col-md-6 fluid_fullwidth text-center">
           <!--リハ中は直接視聴ページへ遷移-->
-          <c-button :isOpen="isOpen" href="/watch/" color_red>席を選ぶ(6/6は直接視聴ページへ)</c-button>
+          <c-button :isOpen="isOpen" href="/chooseSeat/" color_red>着席する</c-button>
         </div>
       </div>
       <div class="row mb-5">
@@ -105,14 +105,42 @@
               v-for="speaker in speakers"
               :key="speaker"
               >
-              <div class="card" style="width: 18rem;">
+              <div class="card">
                 <img class="card-img-top" :src="speaker.img" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">{{speaker.name}}</h5>
                   <p class="card-text font-bold">{{speaker.title}}</p>
+                  <p class="card-text font-bold">トークテーマ<br>{{speaker.theme}}</p>
                   <p class="card-text">{{speaker.desc}}</p>
-                  <a href="#" class="btn">Coming Soon</a>
+                  <ul class="follow-me">
+                    <li
+                      v-for="link in speaker.links"
+                      :key="link">
+                      <a
+                      :href="link"
+                      target="_blank"
+                      rel="noopner">
+                      </a>
+                    </li>
+                   </ul>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-12">
+          <c-header-style-one>Break Information</c-header-style-one>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="img__wrapper">
+                <img src="break1.png" alt="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="img__wrapper">
+                <img src="break2.png" alt="">
               </div>
             </div>
           </div>
@@ -125,7 +153,7 @@
 <script>
 import CButton from '~/components/modules/CButton'
 import CHeaderStyleOne from '~/components/modules/header/CHeaderStyleOne'
-const eventDate = new Date(2021, 5, 6, 12, 58)
+const eventDate = new Date(2021, 6, 4, 12, 58)
 export default {
   components: {
     CButton,
@@ -144,39 +172,46 @@ export default {
         {
           name: '魚住晴香',
           title: '名古屋大学文学部４年',
-          desc: '???',
+          theme: '「コンプレックスが教えてくれた、ありのまま自分らしく生きること」',
+          desc: '名古屋大学４年。コロナ禍で肌荒れに悩み、その経験から持った違和感を、ありのままの状態でSNSで発信。現在は大学に通いながらモデレーターや司会業を務める他、キャリア・コンプレックスなどをテーマに発信を行う。',
           img: 'speaker/魚住さん写真.jpg',
-          Link: '/'
+          links: ['https://twitter.com/hrkzum?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor',
+            'https://www.instagram.com/hrkzum/?igshid=snswpe9odh53']
 
         },
         {
           name: '石井敬子',
           title: '名古屋大学大学院情報学研究科心理・認知科学専攻　准教授',
-          desc: '???',
+          theme: '「人の心はそんな簡単に変わらない」',
+          desc: 'いかに私たちの心の働きやふるまいが社会・文化環境のしがらみから逃れることができないのか、そのことに日々頭を悩ませながら、教育・研究活動をしている。モットーは、「悪魔のような執念、牛のような忍耐」。',
           img: 'speaker/石井敬子さん写真.jpg',
-          Link: '/'
+          links: ['https://twitter.com/KeikoIshii10']
 
         },
         {
           name: '菱谷和明',
           title: '株式会社NEXTRA CEO',
-          desc: '???',
+          theme: '「自分らしく働くことは涙が出るほど幸せだ」',
+          desc: 'キャリア選択における自己理解の必要性を感じ、キャリアコンサルタントとして一人でも多くの方が自分らしく働くことができる社会を目指し活動。短期集中型自己理解プログラムTHISISMEの企画兼講師。',
           img: 'speaker/菱谷さん写真.jpg',
-          Link: '/'
+          links: ['https://twitter.com/careerlabo_tim?s=20',
+            'https://www.instagram.com/careerlabonagoya/?hl=ja']
         },
         {
           name: '佐々木あみ',
           title: '名古屋大学法学部４年',
-          desc: '???',
+          theme: '「本当のワークライフバランスとは、生きたいように生きること」',
+          desc: '高校生の頃、ワークライフバランスを取れない社会に問題意識を抱く。トビタテ留学JAPAN11期生として北欧・スウェーデンに留学し、人々のリアルなワークライフバランスを学ぶため、３0人以上にインタビュー調査を行った。',
           img: 'speaker/佐々木さん写真.jpg',
-          Link: '/'
+          links: []
         },
         {
           name: '倉本美津留',
           title: '放送作家',
-          desc: '???',
+          theme: '「人生にポジティブな影響を与える気づきを得るための方法」',
+          desc: '「ダウンタウンDX」「M-1グランプリ」など、数々のテレビ番組手がける私が、笑いの視点を持って、日常の中に潜んでいる気づきの見つけ方を伝授します。',
           img: 'speaker/倉本さん写真.jpg',
-          Link: '/'
+          links: []
         }
       ]
     }
