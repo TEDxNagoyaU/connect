@@ -42,5 +42,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         personal_token: ${{ secrets.WORKFLOW_TOKEN }}
-        external_repository: TEDxNagoyaU/connect_rehearsal
+        external_repository: TEDxNagoyaU/connect-rehearsal
         publish_dir: ./dist
