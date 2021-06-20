@@ -16,7 +16,7 @@
     </div>
     <div class="row mb-5">
       <div class="col-md-6">
-        <c-header-style-one>トークでの気づき・質問を発信しましょう！</c-header-style-one>
+        <c-header-style-one>トークでの気づき・質問を発信しましょう！!</c-header-style-one>
         <p>トーク視聴中の気づき・質問を下のフォームから発信しましょう！トーク後の感想であなたの意見が採用されるかも？？</p>
         <p>宛先（運営orスピーカーさん）と、内容を入力して送信をお願いします！</p>
         <div class="text-center reaction_form">
