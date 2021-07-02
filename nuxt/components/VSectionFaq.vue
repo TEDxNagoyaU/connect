@@ -63,7 +63,7 @@ export default {
     faqs_break: [
       {
         question: '自分の参加するブレイクが分かりません。',
-        answer: '昨日お送りしたリマインドメールに、〇〇さんが参加されるブレイクが書いてありますので、確認してみてください！メールが見当たらない場合はこちらで確認しますので、お名前を添えて、<a href="mailto:info@tedxnagoyau.com">info@tedxnagoyau.com</a>宛にメールまたは、LINE公式アカウントにてご連絡ください！'
+        answer: '視聴用ページ下部に、登録されたブレイクを検索する機能がございます。フォームに。登録したメールに覚えがない場合はこちらで確認しますので、お名前を添えて、<a href="mailto:info@tedxnagoyau.com">info@tedxnagoyau.com</a>宛にメールまたは、LINE公式アカウントにてご連絡ください！'
       },
       {
         question: 'ブレイクは途中参加できますか？',
@@ -72,8 +72,8 @@ export default {
     ],
     faqs_party: [
       {
-        question: '懇親会申し込みしていないですが、今から参加することはできますか？（確認中。。。）',
-        answer: 'コミュに確認中。。。'
+        question: '懇親会申し込みしていないですが、今から参加することはできますか？',
+        answer: 'はい、可能です。LINE、本サイトの視聴ページの下部などからご参加いただけます。'
       }
     ],
     faqs_trouble: [

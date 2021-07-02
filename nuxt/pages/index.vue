@@ -148,6 +148,35 @@
       </div>
       <div class="row mb-5">
         <div class="col-12">
+          <c-header-style-one>TEDxNagoyaUの理念、今年のテーマ「inflation」について</c-header-style-one>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="frame-wrapper__video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/lh00ZUzLbeA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="frame-wrapper__video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/knJD64EZl0E"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-12">
           <c-header-style-one>FAQ</c-header-style-one>
           <v-section-faq></v-section-faq>
         </div>

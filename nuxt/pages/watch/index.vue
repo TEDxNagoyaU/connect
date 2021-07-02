@@ -110,6 +110,21 @@
     </div>
     <div class="row py-3">
       <div class="col-12">
+        <c-header-style-one>スピーカーさんへの手紙の送信方法</c-header-style-one>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="img__wrapper">
+          <img src="tegami/tegami_1.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="img__wrapper">
+          <img src="tegami/tegami_2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="row py-3">
+      <div class="col-12">
         <c-header-style-one color_infblue>懇親会(17:45~)</c-header-style-one>
         <p>zoomにて、スピーカーさん、参加者の方と交流ができます！イベントでの「あっ」をみんなに共有したり、聞いたりして楽しみましょう！</p>
         <div class="d-flex justify-content-around text-center py-md-5 py-2">
