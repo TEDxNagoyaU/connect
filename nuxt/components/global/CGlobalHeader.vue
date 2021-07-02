@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </div>
     <!--開発時に入れるメニュー-->
-    <!--<c-global-header-nav></c-global-header-nav>-->
+    <c-global-header-nav></c-global-header-nav>
   </div>
 </template>
 
@@ -38,9 +38,6 @@ export default {
       &area{
         width: 300px;
         padding: 10px 15px;
-      }
-      @include mq(md){
-        width: 200px;
       }
       width: 100%;
       height: auto;
