@@ -146,6 +146,12 @@
           </div>
         </div>
       </div>
+      <div class="row mb-5">
+        <div class="col-12">
+          <c-header-style-one>FAQ</c-header-style-one>
+          <v-section-faq></v-section-faq>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -153,11 +159,13 @@
 <script>
 import CButton from '~/components/modules/CButton'
 import CHeaderStyleOne from '~/components/modules/header/CHeaderStyleOne'
+import VSectionFaq from '~/components/VSectionFaq'
 const eventDate = new Date(2021, 6, 4, 12, 58)
 export default {
   components: {
     CButton,
-    CHeaderStyleOne
+    CHeaderStyleOne,
+    VSectionFaq
   },
   data () {
     const now = new Date()

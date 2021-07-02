@@ -5,6 +5,7 @@ $grid-breakpoints: (
   md: 769px,
   xl: 1367px,
 );
+
 @mixin mq($name, $breakpoints: $grid-breakpoints) {
   $max: breakpoint-max($name, $breakpoints);
   @if $max {

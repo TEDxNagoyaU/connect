@@ -39,9 +39,6 @@ export default {
         width: 300px;
         padding: 10px 15px;
       }
-      @include mq(md){
-        width: 200px;
-      }
       width: 100%;
       height: auto;
     }
