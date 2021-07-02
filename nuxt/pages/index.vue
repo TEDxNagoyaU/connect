@@ -188,12 +188,7 @@
 <script>
 import CButton from '~/components/modules/CButton'
 import CHeaderStyleOne from '~/components/modules/header/CHeaderStyleOne'
-<<<<<<< HEAD
-const eventDate = new Date(2021, 5, 20, 12, 58)
-=======
-import VSectionFaq from '~/components/VSectionFaq'
-const eventDate = new Date(2021, 6, 4, 12, 58)
->>>>>>> origin/develop
+const eventDate = new Date(2021, 6, 3, 12, 58)
 export default {
   components: {
     CButton,
