@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </div>
     <!--開発時に入れるメニュー-->
-    <!--<c-global-header-nav></c-global-header-nav>-->
+    <c-global-header-nav></c-global-header-nav>
   </div>
 </template>
 

@@ -98,14 +98,16 @@
           <button class="reaction_button color_infblue" v-on:click="checkBreak()">検索</button>
         </div>
       </div>
-      <div class="col-md-6 breakinfo">
-        <p class="thanks" id="breakinfo_none"></p>
-        <h5 class="subtitle">ブレイク１</h5>
-        <p class="thanks" id="breakinfo_one"></p>
-        <p class="thanks" id="breakinfo_one_pass"></p>
-        <h5 class="subtitle">ブレイク２</h5>
-        <p class="thanks" id="breakinfo_two"></p>
-        <p class="thanks" id="breakinfo_two_pass"></p>
+      <div class="col-md-6">
+        <div class="breakinfo">
+          <p class="thanks" id="breakinfo_none"></p>
+          <h5 class="subtitle">ブレイク１</h5>
+          <p class="thanks" id="breakinfo_one"></p>
+          <p class="thanks" id="breakinfo_one_pass"></p>
+          <h5 class="subtitle">ブレイク２</h5>
+          <p class="thanks" id="breakinfo_two"></p>
+          <p class="thanks" id="breakinfo_two_pass"></p>
+        </div>
       </div>
     </div>
     <div class="row py-3">
@@ -362,6 +364,7 @@ export default {
 
 .breakinfo{
   background: rgb(60, 60, 60);
+  padding: 20px;
 }
 .subtitle {
   color: #FF8C00;

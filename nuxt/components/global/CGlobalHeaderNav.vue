@@ -3,13 +3,7 @@
     <nav>
       <ul>
         <li>
-          <nuxt-link to="/">トップ</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link :to="chooseLink">席選択</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link :to="watchLink">視聴</nuxt-link>
+          <nuxt-link to="/">トップに戻る</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -40,6 +34,7 @@ nav {
       margin-left: 15px;
       a {
         color: $white;
+        font-weight: bold;
       }
     }
   }
