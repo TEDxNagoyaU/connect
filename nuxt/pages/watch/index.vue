@@ -270,13 +270,13 @@ export default {
       const result = this.result.filter(user => user.email === inputEmail)
       console.log(result.length)
       if (result.length === 0) {
-        breakinfoNone.textContent = '登録情報が見つかりませんでした。メールアドレスにお間違いのない場合、運営にご連絡ください。'
+        breakinfoNone.textContent = '登録情報が見つかりませんでした。メールアドレスにお間違いのない場合、運営にご連絡ください。また、ブレイクの変更がされていない場合、サイトを更新して再度お試しください。それでも変更されていない場合は運営にご連絡ください。'
         breakinfoOne.textContent = ''
         breakinfoOnePass.textContent = ''
         breakinfoTwo.textContent = ''
         breakinfoTwoPass.textContent = ''
       } else {
-        breakinfoNone.textContent = ''
+        breakinfoNone.textContent = 'ブレイクの変更がされていない場合、サイトを更新して再度お試しください。それでも変更されていない場合は運営にご連絡ください。'
         let breakOnePass = ''
         let breakTwoPass = ''
         if (result[0].break1 === 'トーク後のスピーカーさんに質問！コーナー1') {
