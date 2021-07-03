@@ -107,6 +107,10 @@
           <h5 class="subtitle">ブレイク２</h5>
           <p class="thanks" id="breakinfo_two"></p>
           <p class="thanks" id="breakinfo_two_pass"></p>
+          <h5 class="subtitle">懇親会</h5>
+          <p>ページ下部に懇親会へ移動するzoomリンクがございますので、表示されたパスワードを入力してお入りください。</p>
+          <p id="breakinfo_party_warning">※懇親会は事前申し込みの方のみご案内しております。申し込みフォームでご登録したメールアドレスをご入力いただくと、懇親会に参加するためのパスワードが表示されます。</p>
+          <p class="thanks" id="breakinfo_party"></p>
         </div>
       </div>
     </div>
@@ -130,7 +134,7 @@
         <c-header-style-one color_infblue>懇親会(17:45~)</c-header-style-one>
         <p>zoomにて、スピーカーさん、参加者の方と交流ができます！イベントでの「あっ」をみんなに共有したり、聞いたりして楽しみましょう！</p>
         <div class="d-flex justify-content-around text-center py-md-5 py-2">
-          <c-button class="reaction_button color_infred" :href="Urls.party" target="_blank" rel="noopener">懇親会に参加</c-button>
+          <c-button class="reaction_button color_infred" :href="Urls.zoom.party" target="_blank" rel="noopener">懇親会に参加</c-button>
         </div>
       </div>
     </div>
@@ -269,6 +273,8 @@ export default {
       const breakinfoOnePass = document.getElementById('breakinfo_one_pass')
       const breakinfoTwo = document.getElementById('breakinfo_two')
       const breakinfoTwoPass = document.getElementById('breakinfo_two_pass')
+      const breakinfoParty = document.getElementById('breakinfo_party')
+      const breakinfoPartyWarning = document.getElementById('breakinfo_party_warning')
       const result = this.result.filter(user => user.email === inputEmail)
       console.log(result.length)
       if (result.length === 0) {
@@ -277,24 +283,28 @@ export default {
         breakinfoOnePass.textContent = ''
         breakinfoTwo.textContent = ''
         breakinfoTwoPass.textContent = ''
+        breakinfoParty.textContent = ''
+        breakinfoPartyWarning.textContent = '※懇親会は事前申し込みの方のみご案内しております。申し込みフォームでご登録したメールアドレスをご入力いただくと、懇親会に参加するためのパスワードが表示されます。'
       } else {
         breakinfoNone.textContent = 'ブレイクの変更がされていない場合、サイトを更新して再度お試しください。それでも変更されていない場合は運営にご連絡ください。'
         let breakOnePass = ''
         let breakTwoPass = ''
-        if (result[0].break1 === 'トーク後のスピーカーさんに質問！コーナー1') {
+        if (result[0].break1.includes('トーク後のスピーカーさんに質問！コーナー1')) {
           breakOnePass = this.Urls.zoom.break1.booth1_pass
-        } else if (result[0].break1 === 'Inflationゲーム ～「あっ」という気づきを与え合おう～') {
+        } else if (result[0].break1.includes('Inflationゲーム ～「あっ」という気づきを与え合おう～')) {
           breakOnePass = this.Urls.zoom.break1.booth2_pass
         }
-        if (result[0].break2 === 'トーク後のスピーカーさんに質問！コーナー2') {
+        if (result[0].break2.includes('トーク後のスピーカーさんに質問！コーナー2')) {
           breakTwoPass = this.Urls.zoom.break2.booth1_pass
-        } else if (result[0].break2 === '「あっ」をシェアしてみよう！') {
+        } else if (result[0].break2.includes('「あっ」をシェアしてみよう！')) {
           breakTwoPass = this.Urls.zoom.break2.booth2_pass
         }
         breakinfoOne.textContent = result[0].break1
         breakinfoOnePass.textContent = breakOnePass
         breakinfoTwo.textContent = result[0].break2
         breakinfoTwoPass.textContent = breakTwoPass
+        breakinfoParty.textContent = this.Urls.zoom.party_pass
+        breakinfoPartyWarning.textContent = ''
       }
     }
   }
