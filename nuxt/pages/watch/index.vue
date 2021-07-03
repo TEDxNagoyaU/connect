@@ -92,7 +92,13 @@
         <c-header-style-one>参加予定のブレイク・パスワード情報</c-header-style-one>
       </div>
       <div class="col-md-6">
-        <p>登録したメールアドレスを入力すると参加予定のブレイク名と、参加型コンテンツの場合、ミーティングID、パスワードが表示されます。</p>
+        <p>登録したメールアドレスを入力すると、</p>
+        <ul>
+          <li>参加予定のブレイク名</li>
+          <li>参加型コンテンツの場合、ミーティングID、パスワード</li>
+          <li>懇親会に参加するためのパスワード</li>
+        </ul>
+        <p>が表示されます。</p>
         <div class="text-center reaction_form">
           <input class="reaction_yes" type="input" name="yes" v-model="inputEmailAddress" placeholder="xxx@example.com" />
           <button class="reaction_button color_infblue" v-on:click="checkBreak()">検索</button>

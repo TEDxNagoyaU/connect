@@ -129,6 +129,7 @@
           </div>
         </div>
       </div>
+      <!--
       <div class="row mb-5">
         <div class="col-12">
           <c-header-style-one>Break Information</c-header-style-one>
@@ -146,6 +147,7 @@
           </div>
         </div>
       </div>
+      -->
       <div class="row mb-5">
         <div class="col-12">
           <c-header-style-one>TEDxNagoyaUの理念、今年のテーマ「inflation」について</c-header-style-one>
