@@ -14,6 +14,7 @@
         </div>
       </div>
     </div>
+    <p>訂正：代表挨拶の際誤りがありました。誤）10の-23乗 正）10の-34乗</p>
     <div class="row mb-5">
       <div class="col-md-6">
         <c-header-style-one>トークでの気づき・質問を発信しましょう！</c-header-style-one>
