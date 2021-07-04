@@ -82,6 +82,9 @@
         </p>
         <p>※各zoomリンクにはパスワードがかけられています。前日のリマインドメールにパスワードがありますのでご確認の上ご参加ください。</p>
         <div class="d-flex justify-content-around text-center py-md-5 py-2">
+          <a class="reaction_button color_infblue" href="sheet.pdf" download="sheet.pdf">Inflationシートはこちら</a>
+        </div>
+        <div class="d-flex justify-content-around text-center py-md-5 py-2">
           <c-button class="reaction_button color_infblue" :href="Urls.zoom.break2.booth1" target="_blank" rel="noopener">ブース１に参加</c-button>
           <c-button class="reaction_button color_infblue" :href="Urls.zoom.break2.booth2" target="_blank" rel="noopener">ブース２に参加</c-button>
         </div>
